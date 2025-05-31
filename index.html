@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N Blog 관리</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div id="header-container"></div>
+    
+    <main class="main-content">
+        <div class="blog-header">
+            <h1>내 블로그 글</h1>
+        </div>
+
+        <!-- 글이 없을 때 표시될 영역 -->
+        <div id="empty-state" class="empty-state">
+            <div class="empty-icon">
+                <i class="far fa-file-alt"></i>
+            </div>
+            <h2>작성한 글이 없습니다</h2>
+            <p>첫 번째 블로그 글을 작성해보세요!</p>
+            <button class="create-post-btn">+ 첫 글 작성하기</button>
+        </div>
+
+        <!-- 글 목록이 표시될 영역 -->
+        <div id="post-list" class="post-list" style="display: none;">
+            <!-- 글 목록이 여기에 동적으로 추가됩니다 -->
+        </div>
+    </main>
+
+    <!-- 글 상세보기 팝업 -->
+    <div id="post-popup" class="popup-overlay">
+        <div class="popup-content">
+            <button class="popup-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="popup-header">
+                <div class="popup-category"></div>
+                <h2 class="popup-title"></h2>
+                <div class="popup-meta">
+                    <span>
+                        <i class="far fa-eye"></i> <span class="popup-views"></span>
+                    </span>
+                    <span>
+                        <i class="far fa-comment"></i> <span class="popup-comments"></span>
+                    </span>
+                </div>
+            </div>
+            <div class="popup-body"></div>
+            <!-- 댓글 영역 추가 -->
+            <div class="comments-section">
+                <h3 class="comments-title">댓글</h3>
+                <div class="comment-form">
+                    <textarea class="comment-input" placeholder="댓글을 입력하세요"></textarea>
+                    <button class="comment-submit">등록</button>
+                </div>
+                <div class="comments-list">
+                    <!-- 댓글들이 여기에 동적으로 추가됩니다 -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.onerror = function(msg, url, lineNo, columnNo, error) {
+            console.error('Error: ' + msg + '\nURL: ' + url + '\nLine: ' + lineNo + '\nColumn: ' + columnNo + '\nError object: ' + JSON.stringify(error));
+            return false;
+        };
+    </script>
+    <script src="./js/blogData.js"></script>
+    <script>
+        // blogData.js 로드 확인
+        if (typeof getAllPosts === 'undefined') {
+            console.error('blogData.js가 제대로 로드되지 않았습니다.');
+        }
+    </script>
+    <script src="./js/main.js"></script>
+</body>
+</html> 

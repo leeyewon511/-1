@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글 작성 - N Blog 관리</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/write.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div id="header-container"></div>
+    
+    <main class="main-content write-content">
+        <div class="write-container">
+            <div class="write-header">
+                <select class="category-select">
+                    <option value="">카테고리 선택</option>
+                    <option value="daily">일상</option>
+                    <option value="tech">테크</option>
+                    <option value="travel">여행</option>
+                    <option value="food">맛집</option>
+                </select>
+                <input type="text" class="title-input" placeholder="제목을 입력하세요">
+            </div>
+            
+            <div class="editor-toolbar">
+                <button class="toolbar-btn" data-command="bold"><i class="fas fa-bold"></i></button>
+                <button class="toolbar-btn" data-command="italic"><i class="fas fa-italic"></i></button>
+                <button class="toolbar-btn" data-command="underline"><i class="fas fa-underline"></i></button>
+                <button class="toolbar-btn" data-command="strikeThrough"><i class="fas fa-strikethrough"></i></button>
+                <span class="separator">|</span>
+                <button class="toolbar-btn" data-command="justifyLeft"><i class="fas fa-align-left"></i></button>
+                <button class="toolbar-btn" data-command="justifyCenter"><i class="fas fa-align-center"></i></button>
+                <button class="toolbar-btn" data-command="justifyRight"><i class="fas fa-align-right"></i></button>
+            </div>
+            
+            <div id="editor" class="editor-content" contenteditable="true"></div>
+            
+            <div class="write-footer">
+                <div class="left-buttons">
+                    <button class="cancel-btn">취소</button>
+                </div>
+                <button class="publish-btn">발행</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- blogData.js를 다른 스크립트보다 먼저 로드해야 합니다 -->
+    <script src="../js/blogData.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/write.js"></script>
+</body>
+</html> 
