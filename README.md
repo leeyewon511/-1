@@ -29,6 +29,22 @@ python -m http.server 8000
 http://localhost:8000
 ```
 
+## 🌐 GitHub Pages로 배포하기
+
+1. GitHub 저장소의 'Settings' 탭으로 이동
+
+2. 왼쪽 사이드바에서 'Pages' 선택
+
+3. Source 섹션에서:
+   - Branch를 'main' (또는 'master')로 선택
+   - 폴더를 '/(root)'로 선택
+   - 'Save' 버튼 클릭
+
+4. 배포가 완료되면 다음 주소로 접속 가능:
+```
+https://[사용자이름].github.io/[저장소이름]
+```
+
 ## 🛠️ 기술 스택
 - HTML/CSS/JavaScript
 

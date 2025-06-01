@@ -72,6 +72,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // DOM 초기화
     initializeElements();
 
+    // 첫 글 작성하기 버튼 이벤트 설정
+    const createPostBtn = document.querySelector('.create-post-btn');
+    if (createPostBtn) {
+        createPostBtn.addEventListener('click', () => {
+            window.location.href = './pages/write.html';
+        });
+    }
+
     // 헤더 
     fetch('../components/header.html')
         .then(response => response.text())
@@ -151,14 +159,14 @@ function setupNavigationEvents() {
     document.getElementById('nav-status').href = prefix + 'pages/status.html';
     document.getElementById('nav-design').href = prefix + 'pages/design.html';
 
-    // 글 작성 페이지
-    const writeLink = document.querySelector('a[href="./pages/write.html"]');
-    if (writeLink) {
-        writeLink.addEventListener('click', function(e) {
+    // 글 작성 페이지 링크 설정
+    const writeLinks = document.querySelectorAll('a[href*="write.html"]');
+    writeLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
             e.preventDefault();
             window.location.href = prefix + 'pages/write.html';
         });
-    }
+    });
 }
 
 // DOM 
