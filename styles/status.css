@@ -1,0 +1,102 @@
+body {
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  background: #f8f9fa;
+  color: #333;
+}
+
+.stats-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.stats-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.visitor-counts {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.count-box {
+  text-align: center;
+}
+
+.count-box h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #666;
+}
+
+.count-box p {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 5px 0 0;
+}
+
+.bar-graph {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  height: 150px;
+  background: #e9ecef;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.bar {
+  width: 30px;
+  background: #4dabf7;
+  border-radius: 5px 5px 0 0;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.bar-labels {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+
+#reset-btn {
+  background-color: #03c75a; /* 네이버 그린 */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(3, 199, 90, 0.4);
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+#reset-btn:hover {
+  background-color: #02b14d; /* 좀 더 진한 초록 */
+  box-shadow: 0 4px 10px rgba(2, 177, 77, 0.6);
+}
+
+#reset-btn:active {
+  background-color: #019a41;
+  box-shadow: none;
+}
+
+#reset-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(3, 199, 90, 0.5);
+}
