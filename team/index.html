@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>N Blog 관리</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+        <a href="./header.html" class="back-to-main-btn">← 메인으로</a>
+    <div id="header-container"></div>
+    <main class="main-content">
+        <div class="blog-header">
+            <h1>내 블로그 글</h1>
+        </div>
+        <div id="empty-state" class="empty-state">
+            <div class="empty-icon"><i class="far fa-file-alt"></i></div>
+            <h2>작성한 글이 없습니다</h2>
+            <p>첫 번째 블로그 글을 작성해보세요!</p>
+            <button class="create-post-btn">+ 첫 글 작성하기</button>
+        </div>
+        <div id="post-list" class="post-list" style="display: none;"></div>
+    </main>
+    <div id="post-popup" class="popup-overlay">
+        <div class="popup-content">
+            <button class="popup-close"><i class="fas fa-times"></i></button>
+            <div class="popup-header">
+                <div class="popup-category"></div>
+                <h2 class="popup-title"></h2>
+                <div class="popup-meta">
+                    <span><i class="far fa-eye"></i> <span class="popup-views"></span></span>
+                    <span><i class="far fa-comment"></i> <span class="popup-comments"></span></span>
+                </div>
+            </div>
+            <div class="popup-body"></div>
+            <div class="comments-section">
+                <h3 class="comments-title">댓글</h3>
+                <div class="comment-form">
+                    <textarea class="comment-input" placeholder="댓글을 입력하세요"></textarea>
+                    <button class="comment-submit">등록</button>
+                </div>
+                <div class="comments-list"></div>
+            </div>
+        </div>
+    </div>
+    <script src="./design.js"></script>
+    <script src="./blogData.js"></script>
+    <script src="./main.js"></script>
+    <script src="./design.css"></script>
+</body>
+</html>

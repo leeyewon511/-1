@@ -1,0 +1,185 @@
+.back-to-main-btn {
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 0.5em 1em;
+    background: #03C75A;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+    transition: background 0.2s;
+    z-index: 10;
+}
+.back-to-main-btn:hover {
+    background: #029e47;
+}
+
+
+body {
+    font-family: '맑은 고딕', 'Malgun Gothic', Arial, sans-serif;
+    background: #f5f7fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 60px auto 0 auto;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 6px 24px rgba(3,199,90,0.12);
+    padding: 60px 48px 48px 48px;
+}
+
+h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #222;
+    margin-bottom: 38px;
+    letter-spacing: -1px;
+    border-left: 12px solid #03c75a;
+    padding-left: 20px;
+}
+
+button {
+    padding: 18px 36px;
+    border: none;
+    border-radius: 10px;
+    background: #03c75a;
+    color: #fff;
+    font-size: 1.35rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-right: 12px;
+    margin-top: 18px;
+    transition: background 0.18s;
+}
+button:hover {
+    background: #029944;
+}
+button#cancelBtn {
+    background: #e5e5e5;
+    color: #333;
+}
+button#cancelBtn:hover {
+    background: #c9c9c9;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+input[type="text"], textarea {
+    border: 2px solid #d3e2d7;
+    border-radius: 10px;
+    padding: 18px 20px;
+    font-size: 1.35rem;
+    background: #f7faf7;
+    color: #222;
+    transition: border 0.2s, box-shadow 0.2s;
+    outline: none;
+    box-shadow: none;
+}
+
+input:invalid, textarea:invalid {
+    outline: none !important;
+    box-shadow: none !important;
+    border: 2px solid #d3e2d7 !important;
+}
+
+input:focus, textarea:focus {
+    border: 2px solid #03c75a;
+    background: #fff;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+textarea {
+    min-height: 180px;
+    resize: vertical;
+}
+
+.input-label {
+    font-size: 1.1rem;
+    color: #03c75a;
+    font-weight: 700;
+    margin-bottom: 6px;
+    display: block;
+}
+
+input[type="file"] {
+    font-size: 1.15rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#imagePreview {
+    display: block;
+    margin-top: 12px;
+    max-width: 320px;
+    max-height: 240px;
+    border-radius: 10px;
+    border: 2px solid #e0e0e0;
+    box-shadow: 0 2px 8px rgba(3,199,90,0.06);
+}
+
+ul#postList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+ul#postList li {
+    background: #f7faf7;
+    margin-bottom: 22px;
+    padding: 28px 32px 18px 32px;
+    border-radius: 10px;
+    border-left: 8px solid #03c75a;
+    box-shadow: 0 2px 8px rgba(3,199,90,0.06);
+    transition: box-shadow 0.2s;
+    font-size: 1.25rem;
+}
+ul#postList li:hover {
+    box-shadow: 0 6px 28px rgba(3,199,90,0.13);
+}
+ul#postList strong {
+    font-size: 1.45rem;
+    color: #222;
+    font-weight: 800;
+}
+ul#postList .post-date {
+    display: block;
+    font-size: 1.1rem;
+    color: #888;
+    margin-bottom: 7px;
+}
+ul#postList img {
+    max-width: 220px;
+    max-height: 160px;
+    margin-top: 10px;
+    border-radius: 7px;
+    border: 1.5px solid #e0e0e0;
+}
+
+#writeBtn {
+    float: right;
+    margin-bottom: 24px;
+    margin-top: -24px;
+    font-size: 1.2rem;
+    padding: 12px 28px;
+}
+
+@media (max-width: 1000px) {
+    .container {
+        max-width: 98vw;
+        padding: 20px 4vw 18px 4vw;
+    }
+    ul#postList li {
+        padding: 16px 8px 12px 14px;
+    }
+}

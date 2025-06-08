@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>방문자 통계</title>
+    <!-- <link rel="stylesheet" href="../styles/styles.css"> -->
+    <!-- <link rel="stylesheet" href="../styles/write.css"> -->
+    <link rel="stylesheet" href="./status.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+        <a href="./header.html" class="back-to-main-btn">← 메인으로</a>
+    <div id="header-container"></div>
+    
+    <main class="main-content">
+        <div class="stats-container">
+           <div class="stats-container">
+                <div class="stats-header">
+                    <h2>📊 방문자 통계</h2>
+
+                    <button id="reset-btn" style="margin-top:20px;">초기화하기</button>
+                    </div>
+
+                    <div class="visitor-counts">
+                    <div class="count-box">
+                        <h3>오늘</h3>
+                        <p id="today-count"></p>
+                    </div>
+                    <div class="count-box">
+                        <h3>전체</h3>
+                        <p id="total-count"></p>
+                    </div>
+                    </div>
+
+                    <div class="bar-graph" id="bar-graph">
+                    <div class="bar" style="height: 40%;"></div>
+                    <div class="bar" style="height: 70%;"></div>
+                    <div class="bar" style="height: 50%;"></div>
+                    <div class="bar" style="height: 90%;"></div>
+                    <div class="bar" style="height: 30%;"></div>
+                    </div>
+                    <div class="bar-labels" id="bar-labels">
+                    <div>월</div>
+                    <div>화</div>
+                    <div>수</div>
+                    <div>목</div>
+                    <div>금</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./blogData.js"></script>
+    <script src="./main.js"></script>
+    <script src="./status.js"></script>
+    <script src="./design.js"></script>
+</body>
+</html> 

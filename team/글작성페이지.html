@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>글 작성하기</title>
+    <link rel="stylesheet" href="./글작성페이지.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <a href="./header.html" class="back-to-main-btn">← 메인으로</a>
+    <div class="container">
+        <h1>글 작성하기</h1>
+        <form id="writeForm">
+            <label class="input-label" for="title">제목</label>
+            <input type="text" id="title" placeholder="제목을 입력하세요" required>
+
+            <label class="input-label" for="content">내용</label>
+            <textarea id="content" placeholder="내용을 입력하세요" required></textarea>
+
+            <label class="input-label" for="imageInput">사진 첨부 (선택)</label>
+            <input type="file" id="imageInput" accept="image/*">
+            <img id="imagePreview" style="display:none;" alt="미리보기">
+
+            <div>
+                <button type="submit">업로드 하기</button>
+                <button type="button" id="cancelBtn">취소</button>
+            </div>
+        </form>
+    </div>
+    <script src="./blogData.js"></script>
+    <script src="./main.js"></script>
+    <script src="./write.js"></script>
+</body>
+</html>

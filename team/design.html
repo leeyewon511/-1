@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>디자인 설정 - N Blog 관리</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./design.css">
+</head>
+<body>
+        <a href="./header.html" class="back-to-main-btn">← 메인으로</a>
+    <div id="header-container"></div>
+    <main class="main-content">
+        <div class="design-container">
+            <h1>디자인 설정</h1>
+            <div class="design-section">
+                <h2>테마 설정</h2>
+                <div class="theme-options">
+                    <div class="theme-option">
+                        <input type="radio" id="light-mode" name="theme" value="light" checked>
+                        <label for="light-mode">
+                            <div class="theme-preview light"><i class="fas fa-sun"></i></div>
+                            라이트 모드
+                        </label>
+                    </div>
+                    <div class="theme-option">
+                        <input type="radio" id="dark-mode" name="theme" value="dark">
+                        <label for="dark-mode">
+                            <div class="theme-preview dark"><i class="fas fa-moon"></i></div>
+                            다크 모드
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="design-actions">
+                <button id="save-design" class="save-btn">설정 저장</button>
+            </div>
+        </div>
+    </main>
+    <script src="./blogData.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
